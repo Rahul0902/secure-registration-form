@@ -36,5 +36,7 @@ function validateForm(event){
     form.submit();
 }
 
+
+
 //Attatch the validateForm function to the form's submit event
 form.addEventListener('submit', validateForm);
