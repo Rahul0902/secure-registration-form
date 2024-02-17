@@ -4,7 +4,7 @@ h1{
   color: white;
 }
 
-.logout-button{
+.log-button{
   position: fixed;
   top: 20px;
   right: 20px;
@@ -15,7 +15,7 @@ h1{
   border-radius: 5px;
 }
 
-.logout-button:hover {
+.log-button:hover {
   background-color: #c12e2e;
 }
 
