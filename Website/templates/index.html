@@ -3,10 +3,36 @@
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
+        <link rel="stylesheet" href="../static/style.css">
     </head>
 
+    <!-- Python code to implement alert messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+        {% if category == 'error' %}
+        <div class="alert alert-danger" role="alert">
+            {{ message }}
+            <button type="button" class="close">X</button>
+        </div>
+        {% elif category == 'success' %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+            <button type="button" class="close">X</button>
+        </div>
+        {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <script src="../static/main.js"></script>
+
+    <!-- Nav Bar-->
+    <a href="login.html" class="logout-button">Logout</a>    
+
+
     <body>
-        <h1>Signed In!</h1>
+        <h1>Welcome!</h1>
     </body>
 
 </html>
