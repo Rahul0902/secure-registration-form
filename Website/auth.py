@@ -10,6 +10,19 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        user = User.query.filter_by(username=username).first()
+        if user:
+            if check_password_hash(user.password, password):
+                flash('Logged In Successfully', category='success')
+            else:
+                flash('Password is Incorrect', category='error')
+        else:
+            flash('Username not Recognised', category='error')
+
     return render_template("login.html")
 
 @auth.route('/register', methods=['GET', 'POST'])
@@ -28,7 +41,16 @@ def register():
 
         #Conditional check regex
 
-        if not re.match(usernameRegex, username):
+        user = User.query.filter_by(username=username).first()
+        existing_email = User.query.filter_by(email=email).first()
+
+        if user:
+            flash('Username Already Exists', category='error')
+
+        elif existing_email:
+            flash('Email Already Exists', category='error')
+
+        elif not re.match(usernameRegex, username):
             flash("Please enter a valid username (5 characters or more and alphanumeric and underscores only)", category='error')
         
         elif not re.match(emailRegex, email):
