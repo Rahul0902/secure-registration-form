@@ -19,6 +19,24 @@ h1{
   background-color: #c12e2e;
 }
 
+/* login.html */
+.account-type{
+  text-align: center;
+}
+
+.account-type p{
+  color: white;
+}
+
+.account-type a{
+  color: white;
+}
+
+.account-type a:hover{
+  color: #A4FC9F;
+}
+
+
 /* Styling for the main form */
 
 html {
@@ -78,11 +96,11 @@ html {
           text-decoration: none;
           margin: 4px 2px;
           cursor: pointer;
-          
+          font-size: 15px;
         }
   
   input[type="submit"]:hover{
-    background-color:#fff;
+    background-color: #A4FC9F;
   }
   
   .submit-button{
