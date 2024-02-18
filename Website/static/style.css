@@ -2,21 +2,28 @@
 
 h1{
   color: white;
+  font-family: sans-serif;
+  font-size: 50px;
 }
 
 .log-button{
-  position: fixed;
-  top: 20px;
-  right: 20px;
   padding: 10px 20px;
-  background-color: #f1f1f2db; 
-  color: black; 
+  background-color: #f1f1f2db;
+  color: black;
   text-decoration: none;
   border-radius: 5px;
 }
 
 .log-button:hover {
-  background-color: #c12e2e;
+  background-color: #A4FC9F;
+}
+
+.home-message{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* login.html */
