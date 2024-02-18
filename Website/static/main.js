@@ -11,3 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+var alerts = document.querySelectorAll(".alert");
+alerts.forEach(function(alert) {
+    setTimeout(function() {
+        if (alert.style.opacity !== "0") {
+            alert.style.opacity = 0;
+            setTimeout(function() {
+                alert.style.display = "none";
+            }, 500); // Adjust the duration of the fade-out effect
+        }
+    }, 3000); // Auto fade out after 3 seconds
+});
