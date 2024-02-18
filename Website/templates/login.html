@@ -13,12 +13,12 @@
         {% if category == 'error' %}
         <div class="alert alert-danger" role="alert">
             {{ message }}
-            <button type="button" class="close">×</button>
+            <button type="button" class="close">X</button>
         </div>
         {% elif category == 'success' %}
         <div class="alert alert-success" role="alert">
             {{ message }}
-            <button type="button" class="close">×</button>
+            <button type="button" class="close">X</button>
         </div>
         {% endif %}
     {% endfor %}
@@ -47,6 +47,13 @@
 
                 <div class="submit-button">
                     <input type="submit" value="Login">
+                </div>
+
+                <br>
+
+                <div class="account-type">
+                    <p> Have an account?</p>
+                    <a href="/register" class="account"> Login </a>    
                 </div>
             </form>
         </div>
