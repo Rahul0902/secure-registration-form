@@ -62,4 +62,19 @@ In my Flask application, I employ Jinja2 templating engine to display server-gen
 
 ![Screenshot 2024-02-19 at 13 48 49](https://github.com/Rahul0902/secure-registration-form/assets/44233038/a965d2e2-8753-4a8c-bb96-8e7bd717ea3d)
 
+<h3>1.5 Restricted Access to Index Page</h3>
+<p>
+    To ensure secure access to sensitive pages, such as the index page ('index.html'), a measure has been implemented in the views.py file. By using the login_required decorator from Flask-Login, only authenticated users are permitted to access the index page. This restriction is enforced by decorating the route handler function for the index page ('home') within the views.py file. Any attempt to access the index page by an unauthenticated user will result in a redirection to the login page, thereby enhancing the overall security of the application.
+</p>
+
+![Screenshot 2024-02-19 at 14 38 53](https://github.com/Rahul0902/secure-registration-form/assets/44233038/0bd88fe2-e28c-4797-ab88-408ae394ed11)
+
+<h2>Conclusion</h2>
+
+<p>Reflecting on the project, I'm pleased with the robust security measures implemented, including leveraging SQLAlchemy ORM for secure database interaction and Jinja2 templating for safe rendering. Password hashing with scrypt algorithm and salting further enhanced security, alongside input validation using regular expressions and error handling. Additionally, restricting access to sensitive pages to authenticated users added an extra layer of security.</p>
+
+<p>Looking ahead, potential developments include implementing CAPTCHA for bot protection, Multi-Factor Authentication (MFA) for enhanced user authentication, and client-side validation to improve user experience. These enhancements would bolster security and user-friendliness, ensuring the project evolves to meet changing web application standards.</p>
+
+
+
 
