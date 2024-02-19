@@ -62,6 +62,10 @@ In my Flask application, I employ Jinja2 templating engine to display server-gen
 
 ![Screenshot 2024-02-19 at 13 48 49](https://github.com/Rahul0902/secure-registration-form/assets/44233038/a965d2e2-8753-4a8c-bb96-8e7bd717ea3d)
 
+
+https://github.com/Rahul0902/secure-registration-form/assets/44233038/26082550-6ca1-4790-b7e8-1258ac11b481
+
+
 <h3>1.5 Restricted Access to Index Page</h3>
 <p>
     To ensure secure access to sensitive pages, such as the index page ('index.html'), a measure has been implemented in the views.py file. By using the login_required decorator from Flask-Login, only authenticated users are permitted to access the index page. This restriction is enforced by decorating the route handler function for the index page ('home') within the views.py file. Any attempt to access the index page by an unauthenticated user will result in a redirection to the login page, thereby enhancing the overall security of the application.
