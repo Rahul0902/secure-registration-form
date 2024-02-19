@@ -16,7 +16,8 @@
 
 ![Screenshot 2024-02-19 at 13 06 45](https://github.com/Rahul0902/secure-registration-form/assets/44233038/1026d159-ff50-4aaa-b24e-d668969406ce)
 
-![Screenshot 2024-02-19 at 13 09 16](https://github.com/Rahul0902/secure-registration-form/assets/44233038/855ff459-cfce-4d7e-a480-bd384b017af2)
+![Screenshot 2024-02-19 at 13 52 08](https://github.com/Rahul0902/secure-registration-form/assets/44233038/02686cb0-0d46-45fc-8a32-726a3572285d)
+
 
 <h3>1.2 XSS Prevention:</h3>
 <p>
@@ -33,25 +34,32 @@ In my Flask application, I employ Jinja2 templating engine to display server-gen
 
 ![Screenshot 2024-02-19 at 13 27 34](https://github.com/Rahul0902/secure-registration-form/assets/44233038/faea417c-e042-4140-8eb5-57b26bd8df92)
 
-![Screenshot 2024-02-19 at 13 28 35](https://github.com/Rahul0902/secure-registration-form/assets/44233038/3c58ddaa-091b-4f6e-85e6-a39bf74a8fce)
+![Screenshot 2024-02-19 at 13 50 38](https://github.com/Rahul0902/secure-registration-form/assets/44233038/8dd6033a-68a8-45f6-93c9-39c16aea31d8)
 
 
 <h3>1.3 Password Hashing and Salting:</h3>
 <p>
-    <strong>Hashing with Scrypt:</strong><br>
-    Passwords are hashed using the scrypt algorithm, which is a modern and secure key derivation function designed to be resistant to brute-force attacks.
-</p>
-<p>
-    <strong>Salting:</strong><br>
-    In addition to hashing, passwords are salted using a unique salt value for each user. Salting prevents attackers from using precomputed rainbow tables to crack hashed passwords more easily.
-</p>
-<p>
-    <strong>SQLAlchemy Integration:</strong><br>
-    SQLAlchemy is used to integrate password hashing and salting into the database schema, ensuring that hashed passwords are securely stored and compared during authentication.
+    In my Flask application, I've implemented robust password security measures to safeguard user credentials. Firstly, passwords undergo hashing using the scrypt algorithm, renowned for its resistance to brute-force attacks. Additionally, each password is salted with a unique value per user, thwarting attackers from exploiting precomputed rainbow tables. This salting technique further fortifies the security of hashed passwords. To seamlessly incorporate these security features, I've leveraged SQLAlchemy integration, ensuring hashed passwords are securely stored and authenticated within the database schema. This comprehensive approach strengthens the protection of user accounts against unauthorized access and data breaches.
 </p>
 
-<h3>Input Validation with Regular Expressions</h3>
+![Screenshot 2024-02-19 at 13 40 14](https://github.com/Rahul0902/secure-registration-form/assets/44233038/0d6508ed-a509-46ff-b342-b2f4c140c956)
+
+<img width="1468" alt="Screenshot 2024-02-19 at 13 40 58" src="https://github.com/Rahul0902/secure-registration-form/assets/44233038/029ec6d8-eca5-4578-82a7-6f55f70828e6">
+
+
+<h3>1.4 Input Validation with Regular Expressions and Error Handling - Including Password Security</h3>
 <p>
-    <strong>Regular Expressions (Regex):</strong><br>
-    Client-side validation is implemented using regular expressions (<code>regex</code>) to ensure that the input provided by the user meets certain criteria before submitting the form data to the server.
+    In my Flask application, I've employed regular expressions (regex) to validate user input effectively. Usernames must consist of alphanumeric characters and underscores only, with a length between 5 and 20 characters. Similarly, email addresses are validated to match the typical email format, while passwords are required to meet specific criteria such as containing digits, lowercase and uppercase letters, special characters, and a minimum length of 12 characters.
 </p>
+<p>
+    These regex patterns are crucially applied within the registration route to validate user input before proceeding with the registration process. In addition to regex validation, conditional statements are utilised to perform error checking during both the login and registration processes. When a user submits the login or registration form, the server-side code checks the input against predefined conditions. For instance, if a username is already in use or the password does not meet the required criteria, corresponding error messages are generated and displayed to the user, guiding them to correct their input before proceeding.
+</p>
+
+
+![Screenshot 2024-02-19 at 13 48 49](https://github.com/Rahul0902/secure-registration-form/assets/44233038/2d2aafc5-5d07-4edf-95c2-7e37d0d601a1)
+
+![Screenshot 2024-02-19 at 13 48 08](https://github.com/Rahul0902/secure-registration-form/assets/44233038/624f6c5f-5805-4335-bc6f-2f33d50d4904)
+
+![Screenshot 2024-02-19 at 13 48 49](https://github.com/Rahul0902/secure-registration-form/assets/44233038/a965d2e2-8753-4a8c-bb96-8e7bd717ea3d)
+
+
