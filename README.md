@@ -69,6 +69,11 @@ In my Flask application, I employ Jinja2 templating engine to display server-gen
 
 ![Screenshot 2024-02-19 at 14 38 53](https://github.com/Rahul0902/secure-registration-form/assets/44233038/0bd88fe2-e28c-4797-ab88-408ae394ed11)
 
+
+https://github.com/Rahul0902/secure-registration-form/assets/44233038/c81e8286-315f-4c3f-8ff6-f03458b21d68
+
+
+
 <h2>Conclusion</h2>
 
 <p>Reflecting on the project, I'm pleased with the robust security measures implemented, including leveraging SQLAlchemy ORM for secure database interaction and Jinja2 templating for safe rendering. Password hashing with scrypt algorithm and salting further enhanced security, alongside input validation using regular expressions and error handling. Additionally, restricting access to sensitive pages to authenticated users added an extra layer of security.</p>
